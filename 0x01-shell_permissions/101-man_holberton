@@ -1,8 +1,7 @@
-#!/bin/bash
-man(2) holberton man page man(2)
-NAME 
+.TH man(2) holberton man page man(2)
+.SH NAME 
 holberton - become a full-stack software engineer.
-SYNOPSIS
+.SH SYNOPSIS
 holberton [STUDENTNAME]
 DESCRIPTION
 Holberton School is a project-based alternative to college for the next generation of software engineers.
