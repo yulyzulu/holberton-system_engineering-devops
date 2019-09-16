@@ -1,2 +1,2 @@
 #!/bin/bash
-find . -type -d -name "[[:alpha:]]*"
+find . -type d -name "[[:alnum:]]*"
