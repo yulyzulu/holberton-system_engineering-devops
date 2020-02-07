@@ -5,11 +5,11 @@ msg="Holberton School"
 msg2="Hi"
 
 i=0
-while [ "$i" -gt 10 ]
+while (( i < 10 ))
 do
-    if [ "$i" -eq 8 ]
+    if [ $i -eq 9 ]
     then
-        echo "$msg2"
+        echo $msg2
     fi
     echo "$msg"
     ((i++))
