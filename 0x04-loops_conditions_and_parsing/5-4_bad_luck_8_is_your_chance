@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+# This script is displaying "Holberton School" 10 times
+
+msg="Holberton School"
+msg1="bad luck"
+msg2="good luck"
+
+i=0
+while (( i < 10 ))
+do
+    if [ $i -eq 3 ]
+    then
+        echo "$msg1"
+    elif [ $i -eq 7 ]
+    then
+        echo "$msg2"
+    else
+        echo "$msg"
+    fi
+    ((i++))
+done

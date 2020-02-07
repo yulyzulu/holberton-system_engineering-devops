@@ -1,0 +1,29 @@
+#!/usr/bin/env bash
+# This script is displaying numbers from 1 to 20
+
+msg="bad luck from China"
+msg1="bad luck from Japan"
+msg2="bad luck from Italy"
+
+i=1
+while (( i < 21 ))
+do
+    case "$i" in
+        4)
+            echo "$i" 
+            echo "$msg"
+            ;;
+        9)
+            echo "$i"
+            echo "$msg1"
+            ;;
+        17)
+            echo "$i"
+            echo "$msg2"
+            ;;
+        *)
+            echo $i
+        ;;
+    esac
+    ((i++))
+done
