@@ -1,8 +1,9 @@
 #!/usr/bin/env bash
 # This script displays msgs, sleep and receiving a SIGTERM signal
 
+trap "I am invincible!!!" SIGTERM
+
 msg="To infinity and beyond"
-msg2=
 
 while ((1))
 do
