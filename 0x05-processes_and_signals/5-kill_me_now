@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 # This script displays the PID, processes that containt the word bash
 
-kill -15 PID
+kill -15 10468
