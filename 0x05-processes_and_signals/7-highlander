@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+# This script displays msgs, sleep and receiving a SIGTERM signal
+
+msg="To infinity and beyond"
+msg2=
+
+while ((1))
+do
+    echo "$msg"
+    sleep 2
+done
+    
