@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 # This script kills the process
-
-pkill 7-highlander
+ID1="$(ps aux | pgrep -f 7-highlander)"
+pkill -f "$ID1"
