@@ -9,5 +9,4 @@ while ((1))
 do
     echo "$msg"
     sleep 2
-done
-    
+done    
