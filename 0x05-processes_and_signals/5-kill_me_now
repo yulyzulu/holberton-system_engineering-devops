@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
-# This script displays the PID, processes that containt the word bash
+# This script that kill process 
 
-kill -15  "$(ps aux | pgrep infinity)"
+pkill 4-to_infinity_and_beyond
