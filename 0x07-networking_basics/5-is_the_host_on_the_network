@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# Bash script that pings and IP address passed as an argument
+ping "$1" -c 5
