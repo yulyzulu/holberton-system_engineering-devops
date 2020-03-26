@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# Return a page containing Hello Holberton
+echo "Hello Holberton" | sudo tee /var/www/html/index.html
+sudo /etc/init.d/apache2 start
