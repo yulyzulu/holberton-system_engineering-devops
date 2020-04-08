@@ -1,0 +1,31 @@
+#!/usr/bin/env bash
+# Bash script that display information about subdomains.
+
+
+print_func()
+{
+    echo The subdomain $1 is a $2 record and points to $3
+}
+
+
+sub_domains=('www' 'lb-01' 'web-01' 'web-02')
+#record="$(dig $1 | grep -A1 'ANSWER SECTION:' | awk '{print $4}'| tr -d '\n')"
+#dom="$(dig $1 | grep -A1 'ANSWER SECTION:' | awk '{print $5}' | tr -d '\n')"
+#dom1="$(dig $2.$1 | grep -A1 'ANSWER SECTION:' | awk '{print $5}' | tr -d '\n')"
+
+if [ $# -eq 1 ]
+then
+    for (( i = 0; i < ${#sub_domains[@]}; i++))
+    do
+        dom="$(dig ${sub_domains[$i]}.$1 | grep -A1 'ANSWER SECTION:' | awk '{print $5}' | tr -d '\n')"
+        record="$(dig ${sub_domains[$i]}.$1 | grep -A1 'ANSWER SECTION:' | awk '{print $4}'| tr -d '\n')"
+        #echo The subdomain ${sub_domains[$i]} is a "$record" record and points to "$dom"
+        print_func "${sub_domains[$i]}" "$record"  "$dom"
+    done
+elif [ $# -eq 2 ]
+then
+    dom1="$(dig $2.$1 | grep -A1 'ANSWER SECTION:' | awk '{print $5}' | tr -d '\n')"
+    record="$(dig $1 | grep -A1 'ANSWER SECTION:' | awk '{print $4}'| tr -d '\n')"
+    #echo The subdomain "$2" is a "$record" record and points to "$dom1"
+    print_func "$2" "$record" "$dom1"
+fi
