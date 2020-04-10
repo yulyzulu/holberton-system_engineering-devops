@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# Script should run the whoami command under the user passed as an argument
+
+if [ $# -eq 2 ]
+then
+    "$(sudo -u)" "$1"
+fi
