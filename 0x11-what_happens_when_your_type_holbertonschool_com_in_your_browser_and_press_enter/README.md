@@ -1,4 +1,4 @@
-#Explanation of what happens when you type holbertonschool.com in your browser and press Enter.
+# Explanation of what happens when you type holbertonschool.com in your browser and press Enter.
 It talk about:
 - DNS request
 - TCP / IP
