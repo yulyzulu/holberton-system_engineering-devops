@@ -12,13 +12,14 @@ if __name__ == "__main__":
     task_json = tasks.json()
     employee_json = employee.json()
     data = {}
+    lista = []
+    data = {sys.argv[1]: lista}
 
     for i in task_json:
         if int(sys.argv[1]) == (i.get('userId')):
             for j in employee_json:
                 if int(sys.argv[1]) == j.get('id'):
-                    data[j.get('id')] = []
-                    data[j.get('id')].append({
+                    lista.append({
                         'task': i.get('title'),
                         'completed': i.get('completed'),
                         'username': j.get('username')})
