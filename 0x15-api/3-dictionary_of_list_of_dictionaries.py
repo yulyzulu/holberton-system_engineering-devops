@@ -18,7 +18,7 @@ if __name__ == "__main__":
         if i.get('userId'):
             data = {i.get('userId'): lista}
             for j in employee_json:
-                if j.get('id'):
+                if j.get('id') == i.get('userId'):
                     lista.append({
                         'task': i.get('title'),
                         'completed': i.get('completed'),
