@@ -18,11 +18,10 @@ if __name__ == "__main__":
         data[i.get('id')] = lista
         for j in task_json:
             if j.get('userId') == i.get('id'):
-                dic = {}
-                dic["task"] = j.get('title')
-                dic["completed"] = j.get('completed')
-                dic["username"] = i.get('username')
-                lista.append(dic)
+                lista.append({
+                    'task': j.get('title'),
+                    'completed': j.get('completed'),
+                    'username': i.get('username')})
 
     with open('todo_all_employees.json', 'w') as json_file:
         json.dump(data, json_file)
